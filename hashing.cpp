@@ -11,10 +11,16 @@ int main()
     }
 
     //precompute
-    int hash[13] = {0};
+    // int hash[13] = {0};
+    // for(int i=0;i<n;i++){
+    //     hash[arr[i]] += 1;
+    // }
+
+    map<int , int>mpp;
     for(int i=0;i<n;i++){
-        hash[arr[i]] += 1;
+        mpp[arr[i]]++;
     }
+
 
     int q;      // no of quesries (how many times the user wants to check the frequency of a specific number)
     cin>>q;
@@ -22,7 +28,7 @@ int main()
         int number;
         cin>>number;
         //fetch
-        cout<<hash[number]<<endl;
+        cout<<mpp[number]<<endl;
     }
     return 0;
 }
